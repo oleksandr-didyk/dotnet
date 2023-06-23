@@ -113,7 +113,7 @@
             "name": "nuget-client",
             "defaultRemote": "https://github.com/NuGet/NuGet.Client",
             "defaultRef": "dev",
-            "exclude":[
+            "exclude": [
                 "src/NuGet.Clients/NuGet.VisualStudio.Client"
             ]
         },
@@ -123,7 +123,11 @@
         },
         {
             "name": "roslyn",
-            "defaultRemote": "https://github.com/dotnet/roslyn"
+            "defaultRemote": "https://github.com/dotnet/roslyn",
+            "exclude": [
+                // Excluded due to a proprietary license - https://github.com/dotnet/source-build/issues/3530
+                "src/Features/LanguageServer/Microsoft.CommonLanguageServerProtocol.Framework.**"
+            ]
         },
         {
             "name": "roslyn-analyzers",
